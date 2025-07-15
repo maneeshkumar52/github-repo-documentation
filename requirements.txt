@@ -1,0 +1,9 @@
+gitpython
+openai
+python-dotenv
+tqdm
+requests
+networkx
+matplotlib
+pydot
+networkx

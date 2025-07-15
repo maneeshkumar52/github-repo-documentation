@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+ENV/
+.env
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Build/Dist
+build/
+dist/
+*.egg-info/
+*.log
+*.sqlite
+*.db
+
+# Output/Docs
+/docs/*.png
+/docs/*.html
+/docs/*.md
+/docs/ast/
+
+# System
+Thumbs.db
+
+# Others
+*.bak
+*.swp
+*.tmp
+*.lock
+
+# Git
+.git/
