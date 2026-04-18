@@ -1,42 +1,65 @@
-# GitHub Repo Documentation Generator
+# GitHub Repo Documentation
 
-This tool automates the process of generating technical documentation and architecture diagrams for any GitHub repository using a local or cloud LLM (OpenAI or Ollama).
+Professional-grade repository documentation automation CLI project with modular processing stages and deterministic artifact generation.
 
-## Features
+## 1. Executive Overview
 
-- Clones a GitHub repository
-- Traverses and filters relevant source files (multi-language support)
-- Generates per-component and overall documentation using OpenAI or Ollama
-- Produces architecture and flow diagrams (optionally Mermaid)
-- Fast, parallel processing
-- Pluggable LLM backend (OpenAI or Ollama)
+This repository provides:
+- CLI-first execution model
+- Modular pipeline components
+- Deterministic output generation
+- Configurable model backends
 
-## Usage
+## 2. Architecture
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run: `python main.py <github_repo_url>`
+```txt
+CLI Entry
+  |
+  +--> Input Acquisition
+  +--> Processing and Analysis Pipeline
+  +--> Documentation and Artifact Generator
+  +--> Output Storage (docs/, outputs/)
+```
 
-### LLM Backend Configuration
+## 3. Repository Structure
 
-- **Ollama (default, local):**
-  - Start Ollama and pull your desired model (e.g., `ollama pull llama3`)
-  - Optionally set environment variables:
-    - `LLM_BACKEND=ollama`
-    - `LLM_MODEL=llama3`
-    - `OLLAMA_URL=http://localhost:11434/api/generate`
-- **OpenAI (cloud):**
-  - Set environment variables:
-    - `LLM_BACKEND=openai`
-    - `LLM_MODEL=gpt-4o` (or your preferred model)
-    - `OPENAI_API_KEY=your-key-here`
+```txt
+github-repo-documentation/
+  main.py
+  core modules
+  requirements.txt
+  docs/ or outputs/
+```
 
-## Requirements
+## 4. Prerequisites
 
-- Python 3.8+
-- For OpenAI: OpenAI API key
-- For Ollama: Ollama running locally with your model pulled
+- Python 3.10+
+- pip 23+
+- Git
 
-## Output
+## 5. Local Setup and Execution
 
-- `docs/COMPONENTS.md`: Per-component documentation
-- `docs/ARCHITECTURE.md`: Overall architecture and flow
+```bash
+git clone https://github.com/maneeshkumar52/github-repo-documentation.git
+cd github-repo-documentation
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+python main.py <args>
+```
+
+## 6. Validation
+
+```bash
+python3 -m compileall -q .
+```
+
+## 7. Troubleshooting
+
+- Missing dependencies: reinstall requirements in active environment
+- Input errors: verify required CLI arguments and source data
+
+## 8. License
+
+See LICENSE in this repository.
